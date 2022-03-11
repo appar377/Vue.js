@@ -1,0 +1,15 @@
+ul {
+  list-style: none;
+  display: flex;
+}
+li {
+  border: 1px solid #eeeeee;
+  padding: 0 30px;
+}
+.select {
+  color: white;
+  background-color: black;
+}
+.content {
+  margin-left: 40px;
+}

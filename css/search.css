@@ -1,0 +1,10 @@
+.user__list {
+  list-style: none;
+  margin-right: 120px;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid yellowgreen;
+  border-radius: 5px;
+}

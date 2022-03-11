@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/select-tab.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="tab">
+    <ul>
+      <li v-on:click="selectNum=1" v-bind:class="{select:selectNum===1}">タブ1</li>
+      <li v-on:click="selectNum=2" v-bind:class="{select:selectNum===2}">タブ2</li>
+      <li v-on:click="selectNum=3" v-bind:class="{select:selectNum===3}">タブ3</li>
+    </ul>
+    <div class="content">
+      <p v-if="selectNum===1">コンテンツ1</p>
+      <p v-else-if="selectNum===2">コンテンツ2</p>
+      <p v-else-if="selectNum===3">コンテンツ3</p>
+    </div>
+  </div>
+  <script>
+    const vm = new Vue({
+      el: '#tab',
+      data: {
+        selectNum: 3
+      },
+    })
+  </script>
+</body>
+
+</html>
